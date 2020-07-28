@@ -1,27 +1,22 @@
-# Headline Event Detector
-
+Headline Event Detector
+===
 ## Overview
-
-Uses NLP tools to extract entities and features from headline data
+The Headline Event Detector is an application that automatically ingests news headlines, 
+extracts newsworthy features from them, categorizes news events from these features, 
+then alerts the user when events of interest to them occur.
 
 ### How It Works
+The Headline Event Detector contains the following jobs, each correlating with a specific part of the event detection process.
 
-This summarizer extracts parts of speech from tweet text using the spaCy NLP library's built-in 
-models. 
-
-
-## Application Suite
-
-This is a testbed suite to take data from headline APIs (in this case, Google News) 
-and extract event data from them. The end result of this (in progress) research project is to have an output 
-of news-worthy event summaries that is generated in real-time as tweets are produced. As of now, 
-this suite consists of the following applications:
-
-* The Headline Collector
-* The Feature Extractor (_this application_)
-    * Uses NLP tools to extract entities and features from tweet data
-* The Newsworthiness Detector
-    * Compares extracted tweet features against a corpus of headlines, verified news tweets, etc., 
-    using machine learning tools to detect newsworthy “events”
-* The Event Dashboard
-    * Shows detected events on a UI, plotting them on a map and showing them in a table in real-time
+#### The Headline Collector
+Automatically collects headlines from automated news sources and saves them to persistent 
+storage for further analysis.
+#### The Feature Extractor
+Batch processes headlines from persistent storage in order to conduct basic natural 
+language processing tasks, with an emphasis on language feature extraction.
+#### The News Categorizer
+Uses extracted features in order to try to categorize headlines based on a select number 
+of news categories, with varying levels of importance assigned to each category. 
+#### The Event Dashboard
+Shows detected events in a UI that allows the user to select, filter, and parse events by 
+location, time, or event type. 
