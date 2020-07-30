@@ -3,10 +3,11 @@ Headline Event Detector
 ## Overview
 The Headline Event Detector is an application that automatically ingests news headlines, 
 extracts newsworthy features from them, categorizes news events from these features, 
-then alerts the user when events of interest to them occur.
+then shares this data via a dashboard and API.
 
 ### How It Works
-The Headline Event Detector contains the following jobs, each correlating with a specific part of the event detection process.
+The Headline Event Detector contains the following jobs, each correlating with a specific 
+part of the event detection process.
 
 #### The Headline Collector
 Automatically collects headlines from automated news sources and saves them to persistent 
